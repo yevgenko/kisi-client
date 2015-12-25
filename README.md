@@ -20,10 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-    kisi = Kisi::Client.new "KISI_TOKEN" # initialize kisi client
-    doors = kisi.get_doors # the list of doors as per kisi response
-    doors[0]['name'] # name/description of the first door in the list
-    kisi.open_door(doors[0]) # open the first door
+```ruby
+# Initialize KISI Client
+kisi = Kisi::Client.new "KISI_TOKEN"
+
+# Get the list (array) of doors
+doors = kisi.get_doors
+
+# The name/description of the first door in the list
+doors.first['name']
+
+# Open the first door
+kisi.open_door(doors.first)
+```
 
 ## Where is my KISI Token?
 
