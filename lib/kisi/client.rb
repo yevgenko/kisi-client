@@ -4,7 +4,7 @@ require 'httparty'
 module Kisi
   class Client
     include HTTParty
-    base_uri 'https://my.getkisi.com/api'
+    base_uri 'https://api.getkisi.com'
     attr_reader :token
 
     def initialize(token)
